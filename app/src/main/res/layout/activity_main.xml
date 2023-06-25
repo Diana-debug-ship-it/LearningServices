@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnStartSimpleService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"/>
+
+    <Button
+        android:id="@+id/btnStartForegroundService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Foreground Service"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"/>
+
+    <Button
+        android:id="@+id/btnStartIntentService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Intent Service"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"/>
+
+    <Button
+        android:id="@+id/btnStartJobDispatcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Job Dispatcher"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"/>
+
+    <Button
+        android:id="@+id/btnStartJobIntentService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Job Intent Service"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"/>
+
+    <Button
+        android:id="@+id/btnStartAlarmManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alarm manager"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"/>
+
+    <Button
+        android:id="@+id/btnStartWorkManager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Work manager"
+        android:layout_margin="10dp"
+        android:textAllCaps="true"/>
+
+</LinearLayout>
