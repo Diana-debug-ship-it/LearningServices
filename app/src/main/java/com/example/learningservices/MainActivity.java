@@ -5,9 +5,14 @@ import android.app.LauncherActivity;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -30,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -42,7 +48,14 @@ public class MainActivity extends AppCompatActivity {
         binding.btnStartForegroundService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showNotification();
+                //showNotification();
+                ContextCompat.startForegroundService(MainActivity.this, MyForegroundService.newIntent(MainActivity.this));
+            }
+        });
+        binding.btnStartIntentService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startService(MyIntentService.newIntent(MainActivity.this));
             }
         });
     }
@@ -65,4 +78,8 @@ public class MainActivity extends AppCompatActivity {
         manager.notify(1, notification);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

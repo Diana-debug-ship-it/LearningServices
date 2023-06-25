@@ -25,7 +25,7 @@ public class MyService extends Service {
     public MyService() {
     }
 
-    //у  сервисов есть свой ЖЦ
+    //services have their own lifecycles
     @Override
     public void onCreate() {
         super.onCreate();
